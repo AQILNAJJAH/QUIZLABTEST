@@ -1,0 +1,39 @@
+package labtest;
+import java.util.Scanner;
+public class Occurances {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		 System.out.print("Enter the String: ");
+	      String z = sc.nextLine();
+	      
+	      z = z.toLowerCase();
+	      String words[] = z.split("\\s+");
+	      int ac = words.length;
+	      
+	      System.out.println("Occurrences");
+	      for(int a=0; a<ac; a++)
+	      {
+	         int count = 1;
+	         for(int b=(a+1); b<(ac-1); b++)
+	         {
+	            if(words[a].equals(words[b]))
+	            {
+	               count++;
+	               for(int k=b; k<(ac-1); k++)
+	                  words[k] = words[k+1];
+	               ac--;
+	               b--;
+	            }
+	         }
+	         if(count==1)
+	            System.out.println(words[a]+ ",1 ");
+	         else
+	            System.out.println(words[a]+", " + count);
+	         count = 0;
+	      }
+
+	}
+
+}
