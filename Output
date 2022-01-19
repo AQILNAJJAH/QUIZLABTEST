@@ -1,8 +1,52 @@
-Enter size of array: 10
+Enter size of array: 4
 Welcome 
-1. Accept
-2. Display Array
-3. Search element
-4. Sort the Array
-5. Back
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
 Select an Option : 1
+Welcome 
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
+Select an Option : A
+2
+1
+3
+4
+Welcome 
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
+Select an Option : B
+2 1 3 4 
+Welcome 
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
+Select an Option : C
+Enter the number you want to search: 3
+Item found at position 3
+Welcome 
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
+Select an Option : D
+Sorted array :
+1 2 3 4 
+Welcome 
+A. Accept
+B. Display Array
+C. Search element
+D. Sort the Array
+E. Back
+Select an Option : E
