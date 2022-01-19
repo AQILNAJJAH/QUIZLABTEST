@@ -7,92 +7,92 @@ public class Quiz1
     
     public static void main(String[] args) 
     {
-        System.out.print("Enter the size of the array: ");
-        int size = sc.nextInt();
-        int[] list = new int[size];
+        System.out.print("Enter size of array: ");
+        int a = sc.nextInt();
+        int[] b = new int[a];
         
-        int xy;
+        char xy;
         do 
         {
             System.out.println("Welcome ");
-            System.out.println("1. Accept");
-            System.out.println("2. Display Array");
-            System.out.println("3. Search element");
-            System.out.println("4. Sort the Array");
-            System.out.println("5. Back");
+            System.out.println("A. Accept");
+            System.out.println("B. Display Array");
+            System.out.println("C. Search element");
+            System.out.println("D. Sort the Array");
+            System.out.println("E. Back");
             System.out.print("Select an Option : ");
-            xy = sc.nextInt();
+            xy = sc.next().charAt(0);
         
             switch (xy) 
             {
-                case 1:
-                    readArray(list);
+                case 'A':
+                    readArray(b);
                     break;
-                case 2:
-                    displayArray(list);
+                case 'B':
+                    displayArray(b);
                     break;
-                case 3:
+                case 'C':
                     System.out.print("Enter the number you want to search: ");
                     int item = sc.nextInt();
-                    int index = searchArray(list, item);
-                    if (index == -1) 
+                    int m = searchArray(b, item);
+                    if (m == -1) 
                     {
                         System.out.println("Item not found");
                     }
                     else 
                     {
-                        System.out.println("Item found at position " + (index + 1));
+                        System.out.println("Item found at position " + (m + 1));
                     }
                     break;
-                case 4:
+                case 'D':
                     System.out.println("Sorted array :");
-                    sortArray(list);
-                    displayArray(list);
+                    sortArray(b);
+                    displayArray(b);
                     break;
             }
-        } while (xy != 5);
+        } while (xy!='E');
     }
     
-    static void readArray(int[] array) 
+    static void readArray(int[]bc) 
     {
-        for (int i = 0; i < array.length; i++)
+        for (int i = 0; i < bc.length; i++)
         {
-           array[i] = sc.nextInt();
+           bc[i] = sc.nextInt();
         }
     }
 
-    static void displayArray(int[] array) 
+    static void displayArray(int[] bc) 
     {
-        for (int i = 0; i < array.length; i++)
+        for (int i = 0; i < bc.length; i++)
         {
-            System.out.print(array[i] + " ");
+            System.out.print(bc[i] + " ");
         }
         System.out.println();
     }
 
-    static int searchArray(int[] array, int data) 
+    static int searchArray(int[] bc, int data) 
     {
-        for (int i = 0; i < array.length; i++)
+        for (int k = 0; k < bc.length; k++)
         {
-            if(array[i] == data)
+            if(bc[k] == data)
             {
-                return i;
+                return k;
             }
         }        
         return -1;
     }
     
-    static void sortArray(int[] array) 
+    static void sortArray(int[] bc) 
     {
-        for (int i = 0; i < array.length - 1; i++)
+        for (int k = 0; k < bc.length - 1; k++)
         {
-            for(int j = 0; j < array.length -i-1; j++)
+            for(int l = 0; l < bc.length -k-1; l++)
             {
-                if(array[j] > array[j+1])
+                if(bc[l] > bc[l+1])
                 {
-                    int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+                    int cj = bc[l];
+                    bc[l] = bc[l+1];
+                    bc[l+1] = cj;
                 }
             }
         }          
